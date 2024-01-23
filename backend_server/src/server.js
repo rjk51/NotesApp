@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://ayaanrjk2004:ayaan0309@cluster0.aynl9kp.mongodb.net/?retryWrites=true&w=majority').then(
+mongoose.connect('{YOUR DATABASE LINK}').then(
     () => {
         app.get('/', (req, res) => {
             const response = { statuscode: res.statusCode, message: 'API works' };
